@@ -27,7 +27,6 @@ MP.MC(
   HCR_CP_B = c(0, 0),
   HCR_CP_TAC = c(0, 1),
   curI_2_target = 2,
-  Effort = 1,
   DR = 0,
   Fdisc = 0.5
 )
@@ -43,7 +42,7 @@ MP.MC(
 
 \item{Max.size}{Positive real number - maximum size limit (NaN is no limit)}
 
-\item{CEff.Mult}{Positive real number (imperfect fraction) the multiplier on current fising effort (fishing pressure)}
+\item{CEff.Mult}{Positive real number (imperfect fraction) the multiplier on current fishing effort (fishing pressure)}
 
 \item{C_I.targ}{Positive real number (imperfect fraction) TAC is calculated TAC(t+1) = I(t) x C(2022)/I(2022) x C_I.targ when TAC.calc = "Ratio"}
 
@@ -76,8 +75,6 @@ MP.MC(
 \item{HCR_CP_TAC}{A positive numeric vector two positions long that is the fraction of the recommended TAC taken below control point 1 and above control point 2 (y axis adjustment of the harvest control rule)}
 
 \item{curI_2_target}{A positive real number that is the level of the current index (recent historical year) relative to the target biomass level (e.g. BMSY) 2 implies recent indices are at twice target levels (underexploited)}
-
-\item{Effort}{An effort limit phrased in units of effort in the most recent historical year (maxE = 1 is current effort). If you set this to NaN the model will only be constrained by other variables such as TAC.}
 
 \item{DR}{Fraction - the discard rate}
 

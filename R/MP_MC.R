@@ -190,8 +190,8 @@ MP.MC = function(x, Data, reps=1, Min.size = 35, Max.size = NaN, CEff.Mult = 1.0
    } # end of TAC calcs
 
    # Minimum size limits
-   Rec@LR5 = Min.size*0.80
-   Rec@LFR = Min.size *1.25
+   Rec@L5 = Min.size*0.95
+   Rec@LFS = Min.size *1.05
 
    # Maximum size limits
    if(!is.na(Max.size)) Rec@HS = Max.size
