@@ -17,7 +17,7 @@
 #' @author T. Carruthers
 #' @seealso \link{RCM}
 #' @export
-cond.MC = function(RCMinput, sims = 12, max_F = 2.3, comp_like = "multinomial", resample = F, parallel = T,silent=T){
+cond.MC = function(RCMinput, sims = 12, max_F = 2.3, comp_like = "multinomial", resample = F, parallel = F,silent=T){
   if(parallel){
     setup()
     cores=parallel::detectCores()/2

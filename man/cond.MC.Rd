@@ -10,7 +10,7 @@ cond.MC(
   max_F = 2.3,
   comp_like = "multinomial",
   resample = F,
-  parallel = T,
+  parallel = F,
   silent = T
 )
 }
