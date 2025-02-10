@@ -18,6 +18,7 @@
 #' @seealso \link{RCM}
 #' @export
 cond.MC = function(RCMinput, sims = 12, max_F = 2.3, comp_like = "multinomial", resample = F, parallel = F,silent=T){
+  cores = 1
   if(parallel){
     setup()
     cores=parallel::detectCores()/2
@@ -27,7 +28,7 @@ cond.MC = function(RCMinput, sims = 12, max_F = 2.3, comp_like = "multinomial", 
   OM = SubCpars(RCMinput$OM, simy)
   RCMfit = RCM(OM, RCMinput[[3]], selectivity = "logistic_length", s_selectivity=c("logistic_age","B","B"),
              max_F = max_F, mean_fit = T, comp_like = comp_like, condition = "catch", cores = cores,
-             drop_nonconv=T,drop_highF=T,resample=resample,LWT=list(Index=c(1/8,1,1)),silent=silent)
+             drop_nonconv=T,drop_highF=T,resample=resample,LWT=list(Index=c(1/8,1,1)), silent=silent)
 
   RCMfit@OM@Name = paste("Manila_Clam CMA", RCMinput[[1]])
   RCMfit
